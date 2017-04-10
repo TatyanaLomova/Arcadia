@@ -77,8 +77,8 @@ public class Controller extends HttpServlet {
                 cal.set(Calendar.YEAR, 2017);
                 Timestamp tstamp2 = new Timestamp(cal.getTimeInMillis());
 
-                PdfCreator pdfReport = new PdfCreator("Test1", data,tstamp1, tstamp2);
-                pdfReport.createPDF_1();
+                //PdfCreator pdfReport = new PdfCreator("Test1", data,tstamp1, tstamp2);
+               //pdfReport.createPDF_1();
                 break;
             case(3):
 
