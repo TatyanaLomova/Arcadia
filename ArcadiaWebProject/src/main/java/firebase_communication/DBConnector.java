@@ -63,7 +63,6 @@ public class DBConnector {
         });
     }
 
-
     public void getCoursesBetweenDates(final firebase_communication.Collection collection, long date1, long date2) {
 
         HashMap<String, Long> grCount = new HashMap<String, Long>();
@@ -127,9 +126,9 @@ public class DBConnector {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot userSnapshot : dataSnapshot.getChildren()) {
                     allUsers.add(new User(
-                            (String) userSnapshot.child("email").getValue(),
-                            (String) userSnapshot.child("name").getValue(),
-                            (Long) userSnapshot.child("rating").getValue()
+                            (String) userSnapshot.child("Email").getValue(),
+                            (String) userSnapshot.child("Name").getValue(),
+                            (Long) userSnapshot.child("Rating").getValue()
                     ));
                 }
                 allUsers.sort(User::compareTo);
